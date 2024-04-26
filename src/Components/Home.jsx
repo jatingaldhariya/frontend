@@ -37,7 +37,7 @@ const Home = () => {
         <div className="main" id="taskForm">
           <div className="addnew">
             <h3 className="heading">{isUpdating ? "Edit" : "Add"} Tasks</h3>
-            <form className="addtask">
+            <form className="addtask" method="post">
               <input
                 type="text"
                 name="text"
@@ -58,7 +58,6 @@ const Home = () => {
                         )
                     : () => addToDo(text, setText, setToDo)
                 }
-                type="submit"
                 className={isUpdating ? "updating" : ""}
               >
                 {isUpdating ? <IoMdCheckmark /> : <IoMdAdd />}
