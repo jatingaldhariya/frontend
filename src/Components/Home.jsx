@@ -59,18 +59,6 @@ const Home = () => {
                         )
                     : () => addToDo(text, setText, setToDo)
                 }
-                onClick={
-                  isUpdating
-                    ? () =>
-                        updateTodo(
-                          todoId,
-                          text,
-                          setToDo,
-                          setText,
-                          setIsUpdating
-                        )
-                    : () => addToDo(text, setText, setToDo)
-                }
                 className={isUpdating ? "updating" : ""}
               >
                 {isUpdating ? <IoMdCheckmark /> : <IoMdAdd />}
