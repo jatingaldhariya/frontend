@@ -46,6 +46,19 @@ const Home = () => {
                 placeholder="Enter Your Task.."
               />
               <button
+                type="submit"
+                onSubmit={
+                  isUpdating
+                    ? () =>
+                        updateTodo(
+                          todoId,
+                          text,
+                          setToDo,
+                          setText,
+                          setIsUpdating
+                        )
+                    : () => addToDo(text, setText, setToDo)
+                }
                 onClick={
                   isUpdating
                     ? () =>
