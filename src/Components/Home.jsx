@@ -58,7 +58,7 @@ const Home = () => {
                         )
                     : () => addToDo(text, setText, setToDo)
                 }
-                type="submit"
+                
                 className={isUpdating ? "updating" : ""}
               >
                 {isUpdating ? <IoMdCheckmark /> : <IoMdAdd />}
